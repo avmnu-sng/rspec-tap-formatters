@@ -1,0 +1,40 @@
+TAP version 13
+pragma +strict
+# test: String {
+  # group: #blank? {
+    not ok 1 - returns false
+    ok 2 - returns true # TODO: need to implement blank? for NilClass
+    1..2
+    # tests: 2, failed: 1, pending: 1
+  }
+  # group: #present? {
+    # group: when whitespaces only {
+      ok 1 - returns false
+      1..1
+      # tests: 1, passed: 1
+    }
+    # group: when nil {
+      not ok 1 - returns false
+      1..1
+      # tests: 1, failed: 1
+    }
+    # group: when whitespaces and other characters {
+      ok 1 - returns true
+      1..1
+      # tests: 1, passed: 1
+    }
+    1..3
+    # tests: 3, passed: 2, failed: 1
+  }
+  # group: #squish {
+    ok 1 - squishes # SKIP: it is Ruby not Rails
+    1..1
+    # tests: 1, pending: 1
+  }
+  1..6
+  # tests: 6, passed: 2, failed: 2, pending: 2
+}
+1..6
+# tests: 6, passed: 2, failed: 2, pending: 2
+# duration: 0.011382 seconds
+# seed: 15065

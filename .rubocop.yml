@@ -1,0 +1,42 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+AllCops:
+  Exclude:
+    - "gemfiles/**/*"
+    - "resources/**/*"
+  TargetRubyVersion: 2.3
+Layout/ClassStructure:
+  Enabled: true
+  Categories:
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - public_class_methods
+    - initializer
+    - instance_methods
+    - protected_methods
+    - private_methods
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+Metrics/BlockLength:
+  Exclude:
+    - "rspec-formatters.gemspec"
+    - "spec/**/*"
+Metrics/ClassLength:
+  Max: 400
+Metrics/MethodLength:
+  Max: 20
+RSpec/ExampleLength:
+  Max: 10
+RSpec/NestedGroups:
+  Max: 4
+Style/CommandLiteral:
+  EnforcedStyle: percent_x
