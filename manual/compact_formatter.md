@@ -1,3 +1,14 @@
+## Compact Formatter
+
+The compact formatter is implemented on top of the [default formatter](default_formatter.md), and it 
+omits the failure reason YAML block. Configure the `--format`
+option to use this format:
+```sh
+--format RSpec::TAP::Formatters::Compact
+```
+
+The generated report for [String spec](string_spec.md):
+```text
 TAP version 13
 # test: String {
   # group: #blank? {
@@ -37,3 +48,4 @@ TAP version 13
 # tests: 6, passed: 2, failed: 2, pending: 2
 # duration: 0.011382 seconds
 # seed: 15065
+```

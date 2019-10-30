@@ -4,10 +4,13 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'pry'
-gem 'pry-byebug'
-gem 'rake', '~> 13.0'
-gem 'yard', '~> 0.9'
+group :development, :test do
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'rake', '~> 13.0'
+end
+
+gem 'yard', '~> 0.9', group: :documentation
 
 group :code_analysis do
   gem 'rubocop', '~> 0.75.0'

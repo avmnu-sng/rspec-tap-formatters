@@ -1,0 +1,19 @@
+site_name: "RSpec TAP Formatters"
+repo_url: https://https://github.com/avmnu-sng/rspec-tap-formatters
+copyright: "Copyright &copy; 2019 Abhimanyu Singh"
+docs_dir: manual
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - TAP Specification: tap_specification.md
+  - Formatters: formatters.md
+  - Formatters Documentation:
+    - Sample Spec: string_spec.md
+    - Default Formatter: default_formatter.md
+    - Compact Formatter: compact_formatter.md
+    - Flat Formatter: flat_formatter.md
+    - Flat Compact Formatter: flat_compact_formatter.md
+markdown_extensions:
+  - admonition
+theme: readthedocs
