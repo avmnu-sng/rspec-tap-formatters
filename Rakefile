@@ -4,11 +4,12 @@ require 'bundler/setup'
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new do |task|
-  task.pattern = 'spec/**/*_spec.rb'
-  task.ruby_opts = %w[-w]
-  task.verbose = false
+desc 'Run Rubocop'
+task :rubocop do
+  sh 'bundle exec rubocop'
 end
 
-desc 'Default: run the rspec examples'
-task default: [:spec]
+desc 'Run all examples'
+RSpec::Core::RakeTask.new(:spec)
+
+task default: %i[spec]

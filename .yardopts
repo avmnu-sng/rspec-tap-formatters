@@ -1,7 +1,2 @@
---exclude features
---no-private
 --markup markdown
---default-return void
--
-CHANGELOG.md
-LICENSE.md
+--hide-void-return

@@ -3,7 +3,6 @@ require:
   - rubocop-rspec
 AllCops:
   Exclude:
-    - "gemfiles/**/*"
     - "resources/**/*"
   TargetRubyVersion: 2.3
 Layout/ClassStructure:
@@ -28,7 +27,7 @@ Lint/AmbiguousBlockAssociation:
     - "spec/**/*"
 Metrics/BlockLength:
   Exclude:
-    - "rspec-formatters.gemspec"
+    - "rspec-tap-formatters.gemspec"
     - "spec/**/*"
 Metrics/ClassLength:
   Max: 400
@@ -37,6 +36,6 @@ Metrics/MethodLength:
 RSpec/ExampleLength:
   Max: 10
 RSpec/NestedGroups:
-  Max: 4
+  Max: 5
 Style/CommandLiteral:
   EnforcedStyle: percent_x

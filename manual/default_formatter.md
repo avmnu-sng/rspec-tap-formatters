@@ -1,3 +1,14 @@
+## Default Formatter
+
+The default formatter reports example groups with proper indentation and adds 
+failure reason YAML blocks for each failed example. Configure the `--format`
+option to use this format:
+```sh
+--format RSpec::TAP::Formatters::Default
+```
+
+The generated report for [String spec](string_spec.md):
+```text
 TAP version 13
 # test: String {
   # group: #present? {
@@ -14,12 +25,12 @@ TAP version 13
     # group: when nil {
       not ok 1 - returns false
         ---
-        location: "./resources/string_spec.rb:8"
+        location: "./string_spec.rb:8"
         error: |-
           Failure/Error: expect(string.present?).to eq(false)
           NoMethodError:
             undefined method `present?' for nil:NilClass
-        backtrace: "./resources/string_spec.rb:9:in `block (4 levels) in <top (required)>'"
+        backtrace: "./string_spec.rb:9:in `block (4 levels) in <top (required)>'"
         ...
       1..1
       # tests: 1, failed: 1
@@ -31,7 +42,7 @@ TAP version 13
     ok 1 - returns true # TODO: need to implement blank? for NilClass
     not ok 2 - returns false
       ---
-      location: "./resources/string_spec.rb:31"
+      location: "./string_spec.rb:31"
       error: |-
         Got 2 failures from failure aggregation block:
           1) expected: true
@@ -64,3 +75,4 @@ TAP version 13
 # tests: 6, passed: 2, failed: 2, pending: 2
 # duration: 0.042018 seconds
 # seed: 1334
+```

@@ -1,0 +1,10 @@
+version: 2
+build:
+  image: latest
+python:
+  version: 3.7
+formats:
+  - htmlzip
+mkdocs:
+  configuration: mkdocs.yml
+  fail_on_warning: false
