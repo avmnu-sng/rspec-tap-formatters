@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/avmnu-sng/rspec-tap-formatters.svg?branch=master)](https://travis-ci.com/avmnu-sng/rspec-tap-formatters)
 [![Documentation Status](https://readthedocs.org/projects/rspec-tap-formatters/badge/?version=latest)](https://rspec-tap-formatters.readthedocs.io/en/latest/?badge=latest)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7dd41099b7e8569fc7ec/maintainability)](https://codeclimate.com/github/avmnu-sng/rspec-tap-formatters/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7dd41099b7e8569fc7ec/test_coverage)](https://codeclimate.com/github/avmnu-sng/rspec-tap-formatters/test_coverage)
 
 **RSpec TAP Formatters** provides four different [TAP 13](https://testanything.org/tap-version-13-specification.html) format style with 
 a proper nested display of example groups and includes stats for the total 

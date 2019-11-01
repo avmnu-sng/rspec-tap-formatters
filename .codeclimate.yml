@@ -41,6 +41,7 @@ plugins:
     config:
       file: ".rubocop.yml"
 exclude_patterns:
+  - "doc/"
   - "gemfiles/"
   - "manual/"
   - "resources/"

@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.files = %x(
     git ls-files -- lib/*
   ).split($INPUT_RECORD_SEPARATOR)
-  spec.files += %w[CHANGELOG.md LICENSE.md README.md .document .yardopts]
+  spec.files += %w[CHANGELOG.md LICENSE.md README.md .yardopts]
   spec.test_files = %x(
     git ls-files -- spec/**/*_spec.rb
   ).split($INPUT_RECORD_SEPARATOR)

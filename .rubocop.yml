@@ -3,8 +3,6 @@ require:
   - rubocop-rspec
 AllCops:
   TargetRubyVersion: 2.3
-Documentation:
-  Enabled: false
 Layout/ClassStructure:
   Enabled: true
   Categories:

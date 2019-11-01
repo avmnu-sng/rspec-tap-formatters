@@ -34,11 +34,11 @@ before_install:
 before_script:
   - ./cc-test-reporter before-build
 script:
+  - bundle exec rake
   - |
     for i in `seq 0 9`
     do
       BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle install
-      BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle exec rubocop
       BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle exec rspec spec
     done
 after_script:
