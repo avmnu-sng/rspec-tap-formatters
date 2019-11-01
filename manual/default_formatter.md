@@ -1,5 +1,3 @@
-## Default Formatter
-
 The default formatter reports example groups with proper indentation and adds 
 failure reason YAML blocks for each failed example. Configure the `--format`
 option to use this format:

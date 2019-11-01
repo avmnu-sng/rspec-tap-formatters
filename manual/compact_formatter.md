@@ -1,5 +1,3 @@
-## Compact Formatter
-
 The compact formatter is implemented on top of the [default formatter](default_formatter.md), and it 
 omits the failure reason YAML block. Configure the `--format`
 option to use this format:

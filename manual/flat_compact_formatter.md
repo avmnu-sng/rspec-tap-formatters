@@ -1,5 +1,3 @@
-## Flat Compact Formatter
-
 The flat compact formatter is implemented on top of the [flat formatter](flat_formatter.md), and it 
 omits the failure reason YAML block. Configure the `--format` option to use this format:
 ```sh
