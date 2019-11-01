@@ -1,3 +1,6 @@
 --markup markdown
 --default-return ''
 --private
+-
+LICENSE.md
+CHANGELOG.md

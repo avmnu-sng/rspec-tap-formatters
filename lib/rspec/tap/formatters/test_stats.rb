@@ -9,6 +9,7 @@ module RSpec
         # @return [Hash<Integer, Array<Integer, 4>>] example stats
         attr_reader :data
 
+        # Constructor
         def initialize
           @data = {}
         end
