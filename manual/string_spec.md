@@ -1,6 +1,4 @@
-## String Spec
-
-A sample String spec to display each formatter result.
+A sample `String` spec to display each formatter result.
 
 ```ruby
 # frozen_string_literal: true

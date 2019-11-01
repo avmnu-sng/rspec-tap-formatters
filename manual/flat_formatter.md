@@ -1,5 +1,3 @@
-## Flat Formatter
-
 The flat formatter does not report example groups. It only lists the examples 
 executed and adds the failure reason YAML block for each failed example.
 Configure the `--format` option to use this format:
