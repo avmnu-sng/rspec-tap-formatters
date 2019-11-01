@@ -18,5 +18,6 @@ script:
     for i in `seq 0 9`
     do
       BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle install
+      BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle exec rubocop
       BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle exec rspec spec
     done

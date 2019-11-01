@@ -1,0 +1,46 @@
+version: "2"
+checks:
+  argument-count:
+    config:
+      threshold: 4
+  complex-logic:
+    config:
+      threshold: 4
+  file-lines:
+    config:
+      threshold: 1000
+  method-complexity:
+    config:
+      threshold: 7
+  method-count:
+    config:
+      threshold: 40
+  method-lines:
+    config:
+      threshold: 20
+  nested-control-flow:
+    config:
+      threshold: 4
+  return-statements:
+    config:
+      threshold: 4
+  similar-code:
+    config:
+      threshold: 50
+  identical-code:
+    config:
+      threshold: 50
+plugins:
+  duplication:
+    enabled: true
+    exclude_patterns:
+      - "spec/"
+  rubocop:
+    enabled: true
+    channel: "rubocop-0-74"
+    config:
+      file: ".rubocop.yml"
+exclude_patterns:
+  - "gemfiles/"
+  - "manual/"
+  - "resources/"

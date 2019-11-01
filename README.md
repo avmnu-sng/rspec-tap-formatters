@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/avmnu-sng/rspec-formatters.svg?token=WFcPTT9yTsCaxfSMc9qm&branch=master)](https://travis-ci.com/avmnu-sng/rspec-formatters)
+[![Build Status](https://travis-ci.com/avmnu-sng/rspec-tap-formatters.svg?branch=master)](https://travis-ci.com/avmnu-sng/rspec-tap-formatters)
+[![Documentation Status](https://readthedocs.org/projects/rspec-tap-formatters/badge/?version=latest)](https://rspec-tap-formatters.readthedocs.io/en/latest/?badge=latest)
 
 **RSpec TAP Formatters** provides four different [TAP 13](https://testanything.org/tap-version-13-specification.html) format style with 
 a proper nested display of example groups and includes stats for the total 
@@ -100,7 +101,7 @@ You can also configure the `.rspec` file:
 
 ## Documentation
 
-Read more about TAP specifications and supported formats in the [official docs](https://).
+Read more about TAP specifications and supported formats in the [official docs](https://rspec-tap-formatters.readthedocs.io/en/latest/).
 
 ## Compatibility
 RSpec TAP Formatters supports `MRI 2.3+` and `RSpec 3`.

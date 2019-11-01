@@ -2,9 +2,9 @@ require:
   - rubocop-performance
   - rubocop-rspec
 AllCops:
-  Exclude:
-    - "resources/**/*"
   TargetRubyVersion: 2.3
+Documentation:
+  Enabled: false
 Layout/ClassStructure:
   Enabled: true
   Categories:
@@ -28,6 +28,7 @@ Lint/AmbiguousBlockAssociation:
 Metrics/BlockLength:
   Exclude:
     - "rspec-tap-formatters.gemspec"
+    - "resources/**/*"
     - "spec/**/*"
 Metrics/ClassLength:
   Max: 400
