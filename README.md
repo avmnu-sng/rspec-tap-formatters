@@ -83,6 +83,13 @@ group :test do
 end
 ```
 
+You can also install using the GitHub package registry:
+```ruby
+source 'https://rubygems.pkg.github.com/avmnu-sng' do
+  gem 'rspec-tap-formatter', '~> 0.1.0', require: false
+end
+```
+
 ## Usage
 
 You can specify the format as the command argument:
