@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
     'homepage_uri' => 'https://www.github.com/avmnu-sng/rspec-tap-formatters',
     'changelog_uri' => 'https://www.github.com/avmnu-sng/rspec-tap-formatters/blob/master/CHANGELOG.md',
     'source_code_uri' => 'https://www.github.com/avmnu-sng/rspec-tap-formatters',
-    'documentation_uri' => 'https://rubydoc.info/gems/rspec-tap-formatters',
+    'documentation_uri' => 'https://rspec-tap-formatters.readthedocs.io/en/latest',
     'bug_tracker_uri' => 'https://github.com/avmnu-sng/rspec-tap-formatters/issues'
   }
 

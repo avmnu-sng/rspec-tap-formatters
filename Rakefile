@@ -12,4 +12,4 @@ end
 desc 'Run all examples'
 RSpec::Core::RakeTask.new(:spec)
 
-task default: %i[spec]
+task default: %i[rubocop spec]
