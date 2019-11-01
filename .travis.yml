@@ -4,15 +4,35 @@ branches:
     - master
 language: ruby
 cache: bundler
-rvm:
-  - 2.3
-  - 2.4
-  - 2.5
-  - 2.6
-  - 2.7
+env:
+  global:
+    - CI_NODE_TOTAL=5
+matrix:
+  fast_finish: true
+  include:
+    - ruby: 2.3
+      env:
+        - CI_NODE_INDEX=0
+    - ruby: 2.4
+      env:
+        - CI_NODE_INDEX=1
+    - ruby: 2.5
+      env:
+        - CI_NODE_INDEX=2
+    - ruby: 2.6
+      env:
+        - CI_NODE_INDEX=3
+    - ruby: 2.7
+      env:
+        - CI_NODE_INDEX=4
 before_install:
   - gem update --system
   - gem install bundler
+  - pip install --user awscli
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+before_script:
+  - ./cc-test-reporter before-build
 script:
   - |
     for i in `seq 0 9`
@@ -21,3 +41,24 @@ script:
       BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle exec rubocop
       BUNDLE_GEMFILE=gemfiles/rspec_3_$i.gemfile bundle exec rspec spec
     done
+after_script:
+  - |
+    if [[ "$TRAVIS_TEST_RESULT" == 0 ]]
+    then
+      ./cc-test-reporter format-coverage --input-type simplecov --output /var/tmp/coverage/codeclimate.$CI_NODE_INDEX.json ./coverage/.resultset.json
+    fi
+  - |
+    if [[ "$TRAVIS_TEST_RESULT" == 0 ]]
+    then
+      aws s3 sync /var/tmp/coverage/ "s3://avmnu-sng/rspec-tap-formatters/$TRAVIS_BUILD_NUMBER"
+    fi
+  - |
+    if [[ "$TRAVIS_TEST_RESULT" == 0 ]]
+    then
+      aws s3 sync "s3://avmnu-sng/rspec-tap-formatters/$TRAVIS_BUILD_NUMBER" /var/tmp/coverage/
+    fi
+  - |
+    if [[ "$TRAVIS_TEST_RESULT" == 0 ]]
+    then
+      ./cc-test-reporter sum-coverage --output - --parts $CI_NODE_TOTAL /var/tmp/coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage --input -
+    fi
