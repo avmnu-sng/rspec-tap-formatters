@@ -10,7 +10,11 @@ group :development, :test do
   gem 'rake', '~> 13.0'
 end
 
-gem 'yard', '~> 0.9', group: :documentation
+group :documentation do
+  gem 'github-markup', '~> 3.0.4'
+  gem 'redcarpet', '~> 3.5.0'
+  gem 'yard', '~> 0.9'
+end
 
 group :code_analysis do
   gem 'rubocop', '~> 0.75.0'

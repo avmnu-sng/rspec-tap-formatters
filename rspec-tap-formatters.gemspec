@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.author = 'Abhimanyu Singh'
   spec.email = 'abhisinghabhimanyu@gmail.com'
   spec.homepage = 'https://www.github.com/avmnu-sng/rspec-tap-formatters'
-  spec.summary = 'RSpec TAP Formatters'
+  spec.summary = 'TAP Formatters for RSpec 3'
   spec.description = <<-DESCRIPTION.gsub(/^\s+\|/, '').chomp
     |Formats RSpec-3 test report in TAP format with a proper nested display of
     |example groups and includes stats for the total number of passed,
@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.files = %x(
     git ls-files -- lib/*
   ).split($INPUT_RECORD_SEPARATOR)
-  spec.files += %w[CHANGELOG.md LICENSE.md README.md .yardopts]
+  spec.files += %w[CHANGELOG.md LICENSE.md README.md .yardopts .document]
   spec.test_files = %x(
     git ls-files -- spec/**/*_spec.rb
   ).split($INPUT_RECORD_SEPARATOR)

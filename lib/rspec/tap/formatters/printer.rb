@@ -16,6 +16,9 @@ module RSpec
           pending: '*'
         }.freeze
 
+        # Constructor
+        #
+        # @param output [StringIO, File] output stream
         def initialize(output)
           @output = output
           @write_to_file = output.is_a?(File)
@@ -178,6 +181,7 @@ module RSpec
         # Handler for formatter +dump_summary+ notification.
         #
         # @param notification [ExampleNotification] example notification
+        # @param seed [Integer] used seed
         def summary_output(notification, seed)
           return if @bailed_out
 

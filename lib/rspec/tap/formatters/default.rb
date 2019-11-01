@@ -28,6 +28,9 @@ module RSpec
 
         RSpec::Core::Formatters.register(self, *NOTIFICATIONS)
 
+        # Constructor
+        #
+        # @param output [StringIO, File] output stream
         def initialize(output)
           super
 
@@ -55,6 +58,8 @@ module RSpec
         end
 
         # Execution finished notification
+        #
+        # @param _notification [NullNotification]
         def start_dump(_notification)
           @printer.example_progress_dump
         end
@@ -83,6 +88,8 @@ module RSpec
         end
 
         # Example start notification
+        #
+        # @param _notification [ExampleNotification]
         def example_started(_notification)
           @example_number += 1
         end
