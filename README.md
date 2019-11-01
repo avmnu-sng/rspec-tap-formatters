@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/rspec-tap-formatters.svg)](https://badge.fury.io/rb/rspec-tap-formatters)
 [![Build Status](https://travis-ci.com/avmnu-sng/rspec-tap-formatters.svg?branch=master)](https://travis-ci.com/avmnu-sng/rspec-tap-formatters)
 [![Documentation Status](https://readthedocs.org/projects/rspec-tap-formatters/badge/?version=latest)](https://rspec-tap-formatters.readthedocs.io/en/latest/?badge=latest)
 [![Inline docs](http://inch-ci.org/github/avmnu-sng/rspec-tap-formatters.svg?branch=master)](http://inch-ci.org/github/avmnu-sng/rspec-tap-formatters)
