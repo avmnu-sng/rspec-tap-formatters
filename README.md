@@ -103,9 +103,11 @@ You can also configure the `.rspec` file:
 ```
 
 ## Documentation
-
 Read more about TAP specifications and supported formats in the [official docs](https://rspec-tap-formatters.readthedocs.io/en/latest/).
 
+## Source Code Documentation
+Read the source code documentation [here](https://rubydoc.info/github/avmnu-sng/rspec-tap-formatters/master).
+ 
 ## Compatibility
 RSpec TAP Formatters supports `MRI 2.3+` and `RSpec 3`.
 
