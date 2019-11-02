@@ -4,6 +4,7 @@
 [![Inline docs](http://inch-ci.org/github/avmnu-sng/rspec-tap-formatters.svg?branch=master)](http://inch-ci.org/github/avmnu-sng/rspec-tap-formatters)
 [![Maintainability](https://api.codeclimate.com/v1/badges/7dd41099b7e8569fc7ec/maintainability)](https://codeclimate.com/github/avmnu-sng/rspec-tap-formatters/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7dd41099b7e8569fc7ec/test_coverage)](https://codeclimate.com/github/avmnu-sng/rspec-tap-formatters/test_coverage)
+[![Gitter](https://badges.gitter.im/rspec-tap-formatters/community.svg)](https://gitter.im/rspec-tap-formatters/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 **RSpec TAP Formatters** provides four different [TAP 13](https://testanything.org/tap-version-13-specification.html) format style with 
 a proper nested display of example groups and includes stats for the total 
@@ -120,7 +121,6 @@ Read the source code documentation [here](https://rubydoc.info/github/avmnu-sng/
 RSpec TAP Formatters supports `MRI 2.3+` and `RSpec 3`.
 
 ## Changelog
-
 The changelog is available [here](CHANGELOG.md).
 
 ## Copyright
