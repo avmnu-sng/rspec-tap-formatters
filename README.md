@@ -6,11 +6,22 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7dd41099b7e8569fc7ec/test_coverage)](https://codeclimate.com/github/avmnu-sng/rspec-tap-formatters/test_coverage)
 [![Gitter](https://badges.gitter.im/rspec-tap-formatters/community.svg)](https://gitter.im/rspec-tap-formatters/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-**RSpec TAP Formatters** provides four different [TAP 13](https://testanything.org/tap-version-13-specification.html) format style with 
-a proper nested display of example groups and includes stats for the total 
-number of passed, failed, and pending tests per example group. The supported 
-formats are:
+## RSpec TAP Formatters
 
+**RSpec TAP Formatters** produces [TAP 13](https://testanything.org/tap-version-13-specification.html) 
+output with a proper nested display of example groups and includes stats for the total 
+number of passed, failed, and pending tests per example group.
+
+## Why use TAP Formatter
+
+With TAP format, it is easier to view failure reason immediately without waiting
+for the failure dumps at the end. Also, TAP is a universal format, so one can:
+- Leverage other tools to parse the output.
+- Mix in different types of tests with consistent output.
+
+## Formatters Behavior
+
+**RSpec TAP Formatters** supports four variants:
 1. `RSpec::TAP::Formatters::Default`
 2. `RSpec::TAP::Formatters::Compact`
 3. `RSpec::TAP::Formatters::Flat`
@@ -18,13 +29,13 @@ formats are:
 
 Each formatter respects the color configuration for the execution and only 
 prints colored output when enabled. However, writing to a file will never use 
-colors.
-
-When writing the report to a file, each formatter will print progress status 
+colors. When writing the report to a file, each formatter will print progress status 
 on the standard output:
-- `.` denotes a passing example.
-- `F` denotes a failing example.
-- `*` denotes a pending example.
+- `.` for passing
+- `F` for failing
+- `*` for pending
+
+## Sample Report
 
 Sample report for [string_spec.rb](resources/string_spec.rb) using 
 `RSpec::TAP::Formatters::Default` format:
@@ -112,17 +123,22 @@ You can also configure the `.rspec` file:
 ```
 
 ## Documentation
+
 Read more about TAP specifications and supported formats in the [official docs](https://rspec-tap-formatters.readthedocs.io/en/latest/).
 
 ## Source Code Documentation
+
 Read the source code documentation [here](https://rubydoc.info/github/avmnu-sng/rspec-tap-formatters/master).
  
 ## Compatibility
+
 RSpec TAP Formatters supports `MRI 2.3+` and `RSpec 3`.
 
 ## Changelog
+
 The changelog is available [here](CHANGELOG.md).
 
 ## Copyright
+
 Copyright (c) 2019 Abhimanyu Singh. See [LICENSE.md](LICENSE.md) for
 further details.

@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :development, :test do
-  gem 'pry'
-  gem 'pry-byebug'
-  gem 'rake', '~> 13.0'
+group :code_analysis do
+  gem 'rubocop', '~> 0.76.0'
+  gem 'rubocop-performance', '~> 1.5.0'
+  gem 'rubocop-rspec', '~> 1.36.0'
 end
 
 group :documentation do
@@ -16,10 +16,10 @@ group :documentation do
   gem 'yard', '~> 0.9'
 end
 
-group :code_analysis do
-  gem 'rubocop', '~> 0.75.0'
-  gem 'rubocop-performance', '~> 1.5.0'
-  gem 'rubocop-rspec', '~> 1.36.0'
+group :development, :test do
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'rake', '~> 13.0'
 end
 
 group :test do
