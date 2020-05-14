@@ -1,4 +1,5 @@
-sudo: false
+dist: trusty
+os: linux
 branches:
   only:
     - master
@@ -6,25 +7,34 @@ language: ruby
 cache: bundler
 env:
   global:
-    - CI_NODE_TOTAL=5
+    - CI_NODE_TOTAL=12
 matrix:
   fast_finish: true
   include:
-    - ruby: 2.3
-      env:
-        - CI_NODE_INDEX=0
-    - ruby: 2.4
-      env:
-        - CI_NODE_INDEX=1
-    - ruby: 2.5
-      env:
-        - CI_NODE_INDEX=2
-    - ruby: 2.6
-      env:
-        - CI_NODE_INDEX=3
-    - ruby: 2.7
-      env:
-        - CI_NODE_INDEX=4
+    - rvm: 2.3.0
+      env: CI_NODE_INDEX=1
+    - rvm: 2.3.8
+      env: CI_NODE_INDEX=2
+    - rvm: 2.4.0
+      env: CI_NODE_INDEX=3
+    - rvm: 2.4.10
+      env: CI_NODE_INDEX=4
+    - rvm: 2.5.0
+      env: CI_NODE_INDEX=5
+    - rvm: 2.5.4
+      env: CI_NODE_INDEX=6
+    - rvm: 2.5.8
+      env: CI_NODE_INDEX=7
+    - rvm: 2.6.0
+      env: CI_NODE_INDEX=8
+    - rvm: 2.6.4
+      env: CI_NODE_INDEX=9
+    - rvm: 2.6.6
+      env: CI_NODE_INDEX=10
+    - rvm: 2.7.0
+      env: CI_NODE_INDEX=11
+    - rvm: 2.7.1
+      env: CI_NODE_INDEX=12
 before_install:
   - gem update --system
   - gem install bundler

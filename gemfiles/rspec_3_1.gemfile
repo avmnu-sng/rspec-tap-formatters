@@ -17,8 +17,8 @@ group :documentation do
 end
 
 group :development, :test do
-  gem 'pry'
-  gem 'pry-byebug'
+  gem 'pry', '~> 0.12.2'
+  gem 'pry-byebug', '~> 3.7.0'
   gem 'rake', '~> 13.0'
 end
 
